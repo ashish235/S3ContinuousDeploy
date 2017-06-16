@@ -5,4 +5,5 @@ deployment:
   prod:
     branch: master
     commands:
+      - aws s3api get-bucket-location --bucket alepo-test-bucket
       - aws s3 sync /home/ubuntu/S3ContinuousDeploy s3://alepo-test-bucket --delete
