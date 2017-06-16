@@ -1,9 +1,9 @@
 dependencies:
     override:
-        - sudo pip install awscli --upgrade --user
+        - pip install awscli
 deployment:
   prod:
     branch: master
     commands:
       - aws s3api get-bucket-location --bucket alepo-test-bucket
-      - aws s3 sync /home/ubuntu/S3ContinuousDeploy s3://alepo-test-bucket --delete
+      - aws s3 sync /home/ubuntu/S3ContinuousDeploy s3://alepo-test-bucket --region ap-south-1 --delete
