@@ -1,6 +1,6 @@
 dependencies:
     override:
-        - sudo pip install awscli
+        - sudo pip install awscli --upgrade --user
 deployment:
   prod:
     branch: master
